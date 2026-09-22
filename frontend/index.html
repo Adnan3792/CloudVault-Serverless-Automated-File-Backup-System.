@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudVault | Personal File Backup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <div class="header">
+                <div class="logo">☁</div>
+
+                <h1>CloudVault</h1>
+
+                <p>
+                    Securely upload and backup your files to the cloud.
+                </p>
+            </div>
+
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h2>Select a file</h2>
+
+                <p>
+                    Choose a file from your computer to backup
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="chooseButton"
+                    class="secondary-button"
+                >
+                    Choose File
+                </button>
+
+                <p id="fileName" class="file-name">
+                    No file selected
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="uploadButton"
+                class="upload-button"
+                disabled
+            >
+                Upload & Backup
+            </button>
+
+
+            <div
+                id="progressContainer"
+                class="progress-container hidden"
+            >
+
+                <div class="progress-info">
+
+                    <span id="progressText">
+                        Uploading...
+                    </span>
+
+                    <span id="progressPercent">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressBar"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="status"
+                class="status hidden"
+            ></div>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>🔒</span>
+                    <p>Secure</p>
+                </div>
+
+                <div class="feature">
+                    <span>☁</span>
+                    <p>Cloud Backup</p>
+                </div>
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <p>Automatic</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

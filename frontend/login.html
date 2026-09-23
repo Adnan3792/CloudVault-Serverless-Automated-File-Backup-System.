@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CloudVault - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="auth-container">
+
+        <div class="auth-card">
+
+            <div class="brand">
+
+                <div class="logo-large">
+                    ☁
+                </div>
+
+                <h1>CloudVault</h1>
+
+                <p>
+                    Secure document backup
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <p
+                id="loginMessage"
+                class="message"
+            ></p>
+
+
+            <div class="auth-footer">
+
+                <p>
+                    Don't have an account?
+                </p>
+
+                <a href="signup.html">
+                    Create an account
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -4,128 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CloudVault | Personal File Backup</title>
+    <title>CloudVault - My Backups</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="container">
+    <header class="navbar">
 
-        <section class="card">
+        <div class="logo">
+            ☁ CloudVault
+        </div>
 
-            <div class="header">
-                <div class="logo">☁</div>
+        <div class="user-section">
+            <span id="userEmail">User</span>
 
-                <h1>CloudVault</h1>
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+        </div>
 
-                <p>
-                    Securely upload and backup your files to the cloud.
-                </p>
-            </div>
+    </header>
 
 
-            <div class="upload-area" id="uploadArea">
+    <main class="dashboard">
 
-                <div class="upload-icon">
-                    ↑
-                </div>
+        <section class="welcome-section">
 
-                <h2>Select a file</h2>
+            <h1>My Cloud Backups</h1>
 
-                <p>
-                    Choose a file from your computer to backup
-                </p>
+            <p>
+                Securely store and retrieve your important documents.
+            </p>
+
+        </section>
+
+
+        <section class="upload-section">
+
+            <h2>Upload Document</h2>
+
+            <div class="upload-box">
 
                 <input
                     type="file"
                     id="fileInput"
-                    hidden
                 >
 
-                <button
-                    type="button"
-                    id="chooseButton"
-                    class="secondary-button"
-                >
-                    Choose File
+                <button id="uploadBtn">
+                    Upload File
                 </button>
 
-                <p id="fileName" class="file-name">
-                    No file selected
+            </div>
+
+            <p id="uploadMessage"></p>
+
+        </section>
+
+
+        <section class="files-section">
+
+            <div class="section-header">
+
+                <h2>My Documents</h2>
+
+                <button id="refreshBtn">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div id="filesContainer">
+
+                <p class="empty-message">
+                    No files available.
                 </p>
-
-            </div>
-
-
-            <button
-                type="button"
-                id="uploadButton"
-                class="upload-button"
-                disabled
-            >
-                Upload & Backup
-            </button>
-
-
-            <div
-                id="progressContainer"
-                class="progress-container hidden"
-            >
-
-                <div class="progress-info">
-
-                    <span id="progressText">
-                        Uploading...
-                    </span>
-
-                    <span id="progressPercent">
-                        0%
-                    </span>
-
-                </div>
-
-                <div class="progress-bar">
-
-                    <div
-                        id="progressBar"
-                        class="progress"
-                    ></div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                id="status"
-                class="status hidden"
-            ></div>
-
-
-            <div class="features">
-
-                <div class="feature">
-                    <span>🔒</span>
-                    <p>Secure</p>
-                </div>
-
-                <div class="feature">
-                    <span>☁</span>
-                    <p>Cloud Backup</p>
-                </div>
-
-                <div class="feature">
-                    <span>⚡</span>
-                    <p>Automatic</p>
-                </div>
 
             </div>
 
         </section>
 
     </main>
+
 
     <script src="app.js"></script>
 

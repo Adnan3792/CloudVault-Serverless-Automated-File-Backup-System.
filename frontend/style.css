@@ -1,8 +1,9 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -10,302 +11,424 @@ body {
     color: #1f2937;
 }
 
-.container {
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.logout-btn {
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #ef4444;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+
+/* =========================
+   AUTH PAGE
+   ========================= */
+
+.auth-container {
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 30px;
+    padding: 20px;
 }
 
-.card {
+
+.auth-card {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
 
     background: white;
 
     padding: 40px;
 
-    border-radius: 16px;
+    border-radius: 12px;
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Header */
-
-.header {
+.brand {
     text-align: center;
 
     margin-bottom: 30px;
 }
 
-.logo {
-    width: 60px;
-    height: 60px;
 
-    margin: 0 auto 15px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    background: #e8f0ff;
-
-    font-size: 30px;
+.logo-large {
+    font-size: 45px;
+    margin-bottom: 10px;
 }
 
-.header h1 {
-    font-size: 30px;
 
+.brand h1 {
+    font-size: 28px;
     margin-bottom: 8px;
 }
 
-.header p {
+
+.brand p {
     color: #6b7280;
 }
 
 
-/* Upload area */
+/* =========================
+   FORM
+   ========================= */
 
-.upload-area {
-    border: 2px dashed #cbd5e1;
-
-    border-radius: 12px;
-
-    padding: 35px 20px;
-
-    text-align: center;
-
-    transition: 0.2s;
-}
-
-.upload-area.dragover {
-    border-color: #2563eb;
-
-    background: #f0f6ff;
-}
-
-.upload-icon {
-    width: 50px;
-    height: 50px;
-
-    margin: 0 auto 15px;
-
-    border-radius: 50%;
-
-    background: #eef2ff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 25px;
-
-    color: #2563eb;
-}
-
-.upload-area h2 {
-    font-size: 20px;
-
-    margin-bottom: 8px;
-}
-
-.upload-area p {
-    color: #6b7280;
+.form-group {
+    margin-bottom: 18px;
 }
 
 
-/* File name */
+.form-group label {
+    display: block;
 
-.file-name {
-    margin-top: 15px;
+    margin-bottom: 7px;
 
-    font-weight: 500;
-
-    word-break: break-all;
+    font-weight: 600;
 }
 
 
-/* Buttons */
+.form-group input {
+    width: 100%;
 
-button {
-    border: none;
+    padding: 12px 14px;
 
-    cursor: pointer;
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
 
     font-size: 15px;
 
-    font-weight: 600;
-
-    border-radius: 8px;
-
-    transition: 0.2s;
+    outline: none;
 }
 
-.secondary-button {
-    margin-top: 18px;
 
-    padding: 11px 20px;
-
-    background: #eef2ff;
-
-    color: #2563eb;
+.form-group input:focus {
+    border-color: #2563eb;
 }
 
-.secondary-button:hover {
-    background: #e0e7ff;
-}
 
-.upload-button {
+.primary-btn {
     width: 100%;
 
-    margin-top: 20px;
+    padding: 12px;
 
-    padding: 14px;
+    border: none;
+
+    border-radius: 7px;
 
     background: #2563eb;
 
     color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
 }
 
-.upload-button:hover:not(:disabled) {
+
+.primary-btn:hover {
     background: #1d4ed8;
 }
 
-.upload-button:disabled {
-    background: #cbd5e1;
 
-    cursor: not-allowed;
-}
+/* =========================
+   AUTH FOOTER
+   ========================= */
 
+.auth-footer {
+    text-align: center;
 
-/* Progress */
-
-.progress-container {
     margin-top: 25px;
-}
-
-.progress-info {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-bottom: 8px;
-
-    font-size: 14px;
-}
-
-.progress-bar {
-    width: 100%;
-
-    height: 8px;
-
-    background: #e5e7eb;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-}
-
-.progress {
-    width: 0%;
-
-    height: 100%;
-
-    background: #2563eb;
-
-    transition: width 0.2s;
-}
-
-
-/* Status */
-
-.status {
-    margin-top: 20px;
-
-    padding: 13px;
-
-    border-radius: 8px;
-
-    text-align: center;
-
-    font-size: 14px;
-}
-
-.status.success {
-    background: #ecfdf5;
-
-    color: #047857;
-}
-
-.status.error {
-    background: #fef2f2;
-
-    color: #b91c1c;
-}
-
-
-/* Features */
-
-.features {
-    display: flex;
-
-    justify-content: space-around;
-
-    margin-top: 30px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #e5e7eb;
-}
-
-.feature {
-    text-align: center;
-
-    font-size: 13px;
 
     color: #6b7280;
 }
 
-.feature span {
-    display: block;
 
-    font-size: 20px;
+.auth-footer a {
+    display: inline-block;
 
-    margin-bottom: 5px;
+    margin-top: 7px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
 }
 
 
-/* Utility */
-
-.hidden {
-    display: none;
+.auth-footer a:hover {
+    text-decoration: underline;
 }
 
 
-/* Mobile */
+/* =========================
+   MESSAGES
+   ========================= */
+
+.message {
+    text-align: center;
+
+    margin-top: 15px;
+
+    min-height: 20px;
+}
+
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.dashboard {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+}
+
+
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+
+.welcome-section h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.welcome-section p {
+    color: #6b7280;
+}
+
+
+/* =========================
+   UPLOAD SECTION
+   ========================= */
+
+.upload-section,
+.files-section {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.upload-section h2,
+.files-section h2 {
+    margin-bottom: 20px;
+}
+
+
+.upload-box {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+
+.upload-box input {
+    padding: 10px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+}
+
+
+.upload-box button,
+#refreshBtn {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.upload-box button:hover,
+#refreshBtn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   FILE SECTION
+   ========================= */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.file-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.file-name {
+    font-weight: 600;
+}
+
+
+.file-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.download-btn {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #16a34a;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.delete-btn {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ef4444;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.empty-message {
+    color: #6b7280;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 600px) {
 
-    .container {
-        padding: 15px;
+    .navbar {
+        padding: 0 15px;
     }
 
-    .card {
-        padding: 25px 20px;
+
+    .user-section {
+        gap: 8px;
     }
 
-    .header h1 {
-        font-size: 25px;
+
+    .auth-card {
+        padding: 25px;
     }
 
-    .features {
-        gap: 10px;
+
+    .dashboard {
+        margin-top: 25px;
     }
+
+
+    .file-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
 }

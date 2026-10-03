@@ -17,36 +17,7 @@ CloudVault uses **Amazon Cognito** for authentication, **Amazon API Gateway** fo
 
 A key part of the project is the use of **S3 presigned URLs**. Lambda generates temporary upload and download URLs so the browser can transfer files directly to S3 without making the bucket public or exposing AWS secret credentials in the frontend.
 
----
-
-## 📑 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Problem Statement](#-problem-statement)
-- [Solution](#-solution)
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Architecture Diagram](#-architecture-diagram)
-- [How It Works](#-how-it-works)
-- [Authentication](#-authentication)
-- [File Upload](#-file-upload)
-- [File Listing](#-file-listing)
-- [File Download](#-file-download)
-- [File Deletion](#-file-deletion)
-- [Security](#-security)
-- [API Routes](#-api-routes)
-- [AWS Services](#-aws-services)
-- [Project Structure](#-project-structure)
-- [Local Setup](#-local-setup)
-- [Configuration](#-configuration)
-- [Screenshots](#-screenshots)
-- [Challenges Solved](#-challenges-solved)
-- [Future Improvements](#-future-improvements)
-- [What I Learned](#-what-i-learned)
-- [Tech Stack](#-tech-stack)
-- [Author](#-author)
-
----
+-
 
 # 📌 Project Overview
 
@@ -1047,7 +1018,7 @@ The following screenshots are available in the `docs` directory.
 
 ## 1. Sign In
 
-![CloudVault Sign In](docs/signin.jpg)
+![CloudVault Sign In](docs/screenshots/signin.jpg)
 
 Shows the CloudVault authentication interface and Cognito sign-in flow.
 
@@ -1055,7 +1026,7 @@ Shows the CloudVault authentication interface and Cognito sign-in flow.
 
 ## 2. Sign Up
 
-![CloudVault Sign Up](docs/signup.jpg)
+![CloudVault Sign Up](docs/screenshots/signup.jpg)
 
 Shows the account registration interface.
 
@@ -1063,7 +1034,7 @@ Shows the account registration interface.
 
 ## 3. CloudVault Dashboard
 
-![CloudVault Dashboard](docs/cloudvault-dashboard.jpg)
+![CloudVault Dashboard](docs/screenshots/cloudvault-dashboard.jpg)
 
 Shows the main dashboard where users can upload, view, download, and delete files.
 
@@ -1071,7 +1042,7 @@ Shows the main dashboard where users can upload, view, download, and delete file
 
 ## 4. API Routes
 
-![CloudVault API Routes](docs/api-routes.jpg)
+![CloudVault API Routes](docs/screenshots/api-routes.jpg)
 
 Shows the configured API Gateway routes used by CloudVault.
 
@@ -1079,7 +1050,7 @@ Shows the configured API Gateway routes used by CloudVault.
 
 ## 5. Lambda Functions
 
-![CloudVault Lambda Functions](docs/lambda-functions.jpg)
+![CloudVault Lambda Functions](docs/screenshots/lambda-functions.jpg)
 
 Shows the Lambda functions responsible for the application's file operations.
 
@@ -1087,7 +1058,7 @@ Shows the Lambda functions responsible for the application's file operations.
 
 ## 6. S3 Bucket
 
-![CloudVault S3 Bucket](docs/s3bucket.jpg)
+![CloudVault S3 Bucket](docs/screenshots/s3bucket.jpg)
 
 Shows the CloudVault S3 storage configuration.
 
@@ -1095,7 +1066,7 @@ Shows the CloudVault S3 storage configuration.
 
 ## 7. User Pool
 
-![CloudVault User Pool](docs/user-pool.jpg)
+![CloudVault User Pool](docs/screenshots/user-pool.jpg)
 
 Shows the Amazon Cognito user pool used for authentication.
 
@@ -1103,7 +1074,7 @@ Shows the Amazon Cognito user pool used for authentication.
 
 ## 8. File Deletion
 
-![CloudVault File Deletion](docs/deleting-files.jpg)
+![CloudVault File Deletion](docs/screenshots/deleting-files.jpg)
 
 Shows the file deletion functionality in the CloudVault dashboard.
 
@@ -1116,7 +1087,6 @@ Additional technical documentation is available in:
 ```text
 docs/
 ├── architecture.png
-└── architecture.md
 ```
 
 The architecture documentation provides a visual and technical overview of:

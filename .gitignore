@@ -19,3 +19,5 @@ venv/
 
 # Temporary files
 *.log
+
+.vscode

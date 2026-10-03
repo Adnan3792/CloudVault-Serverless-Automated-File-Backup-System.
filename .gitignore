@@ -1,0 +1,21 @@
+# OS
+desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+.aws/
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.log

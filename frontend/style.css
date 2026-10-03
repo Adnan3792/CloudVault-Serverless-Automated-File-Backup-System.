@@ -1,9 +1,12 @@
+/* ========================================
+   GLOBAL
+   ======================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,13 +15,14 @@ body {
 }
 
 
-/* =========================
+/* ========================================
    NAVBAR
-   ========================= */
+   ======================================== */
 
 .navbar {
     height: 70px;
-    background: white;
+
+    background: #ffffff;
 
     display: flex;
     align-items: center;
@@ -29,12 +33,11 @@ body {
     border-bottom: 1px solid #e5e7eb;
 }
 
-
 .logo {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 23px;
+    font-weight: 700;
+    color: #111827;
 }
-
 
 .user-section {
     display: flex;
@@ -42,28 +45,46 @@ body {
     gap: 15px;
 }
 
+#userEmail {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   LOGOUT BUTTON
+   ======================================== */
 
 .logout-btn {
-    padding: 9px 16px;
+    min-width: 95px;
+
+    padding: 11px 20px;
 
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
 
-    background: #ef4444;
-    color: white;
+    background: #dc2626;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
 
     cursor: pointer;
-}
 
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
 
 .logout-btn:hover {
-    background: #dc2626;
+    background: #b91c1c;
+    transform: translateY(-1px);
 }
 
 
-/* =========================
+/* ========================================
    AUTH PAGE
-   ========================= */
+   ======================================== */
 
 .auth-container {
     min-height: 100vh;
@@ -75,12 +96,11 @@ body {
     padding: 20px;
 }
 
-
 .auth-card {
     width: 100%;
     max-width: 400px;
 
-    background: white;
+    background: #ffffff;
 
     padding: 40px;
 
@@ -90,39 +110,33 @@ body {
         0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-
 .brand {
     text-align: center;
-
     margin-bottom: 30px;
 }
-
 
 .logo-large {
     font-size: 45px;
     margin-bottom: 10px;
 }
 
-
 .brand h1 {
     font-size: 28px;
     margin-bottom: 8px;
 }
-
 
 .brand p {
     color: #6b7280;
 }
 
 
-/* =========================
+/* ========================================
    FORM
-   ========================= */
+   ======================================== */
 
 .form-group {
     margin-bottom: 18px;
 }
-
 
 .form-group label {
     display: block;
@@ -131,7 +145,6 @@ body {
 
     font-weight: 600;
 }
-
 
 .form-group input {
     width: 100%;
@@ -147,41 +160,48 @@ body {
     outline: none;
 }
 
-
 .form-group input:focus {
     border-color: #2563eb;
 }
 
 
+/* ========================================
+   PRIMARY BUTTON
+   ======================================== */
+
 .primary-btn {
     width: 100%;
 
-    padding: 12px;
+    padding: 13px;
 
     border: none;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     background: #2563eb;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 16px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     cursor: pointer;
-}
 
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
 
 .primary-btn:hover {
     background: #1d4ed8;
+    transform: translateY(-1px);
 }
 
 
-/* =========================
+/* ========================================
    AUTH FOOTER
-   ========================= */
+   ======================================== */
 
 .auth-footer {
     text-align: center;
@@ -190,7 +210,6 @@ body {
 
     color: #6b7280;
 }
-
 
 .auth-footer a {
     display: inline-block;
@@ -204,15 +223,14 @@ body {
     font-weight: 600;
 }
 
-
 .auth-footer a:hover {
     text-decoration: underline;
 }
 
 
-/* =========================
+/* ========================================
    MESSAGES
-   ========================= */
+   ======================================== */
 
 .message {
     text-align: center;
@@ -223,9 +241,9 @@ body {
 }
 
 
-/* =========================
+/* ========================================
    DASHBOARD
-   ========================= */
+   ======================================== */
 
 .dashboard {
     max-width: 1100px;
@@ -235,11 +253,9 @@ body {
     padding: 0 20px;
 }
 
-
 .welcome-section {
     margin-bottom: 30px;
 }
-
 
 .welcome-section h1 {
     font-size: 30px;
@@ -247,36 +263,42 @@ body {
     margin-bottom: 8px;
 }
 
-
 .welcome-section p {
     color: #6b7280;
+
+    font-size: 15px;
 }
 
 
-/* =========================
+/* ========================================
    UPLOAD SECTION
-   ========================= */
+   ======================================== */
 
 .upload-section,
 .files-section {
-    background: white;
+    background: #ffffff;
 
-    padding: 25px;
+    padding: 28px;
 
     margin-bottom: 25px;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-
 .upload-section h2,
 .files-section h2 {
     margin-bottom: 20px;
+
+    font-size: 20px;
 }
 
+
+/* ========================================
+   UPLOAD BOX
+   ======================================== */
 
 .upload-box {
     display: flex;
@@ -289,40 +311,156 @@ body {
 }
 
 
+/* ========================================
+   FILE INPUT / CHOOSE FILE
+   ======================================== */
+
 .upload-box input {
-    padding: 10px;
+    padding: 5px;
 
     border: 1px solid #d1d5db;
 
-    border-radius: 6px;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-size: 15px;
+
+    color: #374151;
 }
 
 
-.upload-box button,
-#refreshBtn {
-    padding: 10px 18px;
+/* Actual "Choose File" button */
+
+.upload-box input::file-selector-button {
+    padding: 12px 20px;
+
+    margin-right: 12px;
 
     border: none;
 
-    border-radius: 6px;
+    border-radius: 7px;
+
+    background: #475569;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.upload-box input::file-selector-button:hover {
+    background: #334155;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   UPLOAD FILE BUTTON
+   ======================================== */
+
+#uploadBtn {
+    min-width: 125px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 7px;
 
     background: #2563eb;
 
-    color: white;
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#uploadBtn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+#uploadBtn:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+
+    transform: none;
 }
 
 
-.upload-box button:hover,
+/* Upload message */
+
+#uploadMessage {
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   REFRESH BUTTON
+   ======================================== */
+
+#refreshBtn {
+    min-width: 95px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
 #refreshBtn:hover {
     background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+#refreshBtn:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+
+    transform: none;
 }
 
 
-/* =========================
+/* ========================================
    FILE SECTION
-   ========================= */
+   ======================================== */
 
 .section-header {
     display: flex;
@@ -330,8 +468,9 @@ body {
     align-items: center;
 
     justify-content: space-between;
-}
 
+    margin-bottom: 5px;
+}
 
 .file-item {
     display: flex;
@@ -340,53 +479,106 @@ body {
 
     align-items: center;
 
-    padding: 15px;
+    padding: 17px 5px;
 
     border-bottom: 1px solid #e5e7eb;
 }
 
+.file-item:last-child {
+    border-bottom: none;
+}
 
 .file-name {
     font-weight: 600;
+
+    color: #1f2937;
+
+    font-size: 15px;
 }
 
+
+/* ========================================
+   FILE ACTION BUTTONS
+   ======================================== */
 
 .file-actions {
     display: flex;
 
-    gap: 8px;
+    gap: 10px;
+
+    align-items: center;
 }
 
 
+/* DOWNLOAD */
+
 .download-btn {
-    padding: 8px 12px;
+    min-width: 105px;
+
+    padding: 11px 18px;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 7px;
 
     background: #16a34a;
 
-    color: white;
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #15803d;
+
+    transform: translateY(-1px);
 }
 
 
+/* DELETE */
+
 .delete-btn {
-    padding: 8px 12px;
+    min-width: 90px;
+
+    padding: 11px 18px;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 7px;
 
-    background: #ef4444;
+    background: #dc2626;
 
-    color: white;
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
+.delete-btn:hover {
+    background: #b91c1c;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   EMPTY FILE MESSAGE
+   ======================================== */
 
 .empty-message {
     color: #6b7280;
@@ -394,41 +586,111 @@ body {
     text-align: center;
 
     padding: 30px;
+
+    font-size: 14px;
 }
 
 
-/* =========================
+/* ========================================
    RESPONSIVE
-   ========================= */
+   ======================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .navbar {
-        padding: 0 15px;
+        padding: 0 20px;
     }
-
 
     .user-section {
         gap: 8px;
     }
 
+    #userEmail {
+        max-width: 150px;
 
-    .auth-card {
-        padding: 25px;
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
     }
-
 
     .dashboard {
         margin-top: 25px;
+
+        padding: 0 15px;
     }
 
+    .upload-section,
+    .files-section {
+        padding: 20px;
+    }
+
+    .upload-box {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .upload-box input {
+        width: 100%;
+    }
+
+    #uploadBtn {
+        width: 100%;
+    }
 
     .file-item {
         flex-direction: column;
 
         align-items: flex-start;
 
-        gap: 12px;
+        gap: 14px;
     }
 
+    .file-actions {
+        width: 100%;
+    }
+
+    .download-btn,
+    .delete-btn {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logout-btn {
+        min-width: auto;
+
+        padding: 9px 13px;
+    }
+
+    #userEmail {
+        display: none;
+    }
+
+    .welcome-section h1 {
+        font-size: 25px;
+    }
+
+    .file-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .download-btn,
+    .delete-btn {
+        width: 100%;
+    }
 }

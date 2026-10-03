@@ -245,7 +245,7 @@ CloudVault uses the following architecture:
 
 The project includes a dedicated architecture diagram in the `docs` directory.
 
-![CloudVault Architecture](docs/architecture.png)
+![CloudVault Architecture](docs/CloudVaultAWSServerlessArchitecture.png)
 
 The diagram shows:
 
